@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-forgot-password-code',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './forgot-password-code.component.css'
 })
 export class ForgotPasswordCodeComponent {
+  constructor(private router: Router) {}
 
+  onSendCode(): void {
+    this.router.navigate(['/forgot-password-new']);
+  }
 }
