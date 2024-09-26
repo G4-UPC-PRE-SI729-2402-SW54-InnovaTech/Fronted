@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import {CampaignsComponent} from "../campaigns/campaigns.component";
+import {SidebarModelComponent} from "../sidebar-model/sidebar-model.component";
 
 @Component({
   selector: 'app-user-interface-main',
   standalone: true,
-  imports: [],
+  imports: [
+    CampaignsComponent,
+    SidebarModelComponent
+  ],
   templateUrl: './user-interface-main.component.html',
   styleUrl: './user-interface-main.component.css'
 })
