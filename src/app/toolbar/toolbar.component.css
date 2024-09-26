@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #1e70bf;
+  background-color: #295F98;
   color: white;
 }
 
@@ -18,8 +18,8 @@
 }
 
 .toolbar-right button {
-  background-color: white;
-  color: #1e70bf;
+  background-color: #0B4078;
+  color: #ffffff;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -29,4 +29,5 @@
 
 .toolbar-right button:hover {
   background-color: #d1e4f1;
+  color: #0B4078;
 }

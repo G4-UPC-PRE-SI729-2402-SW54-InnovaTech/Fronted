@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import {MatCardImage} from "@angular/material/card";
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [],
+    imports: [
+        MatCardImage
+    ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
