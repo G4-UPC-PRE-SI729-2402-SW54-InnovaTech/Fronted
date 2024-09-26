@@ -17,5 +17,8 @@ export class LoginComponent {
   onSendCode(): void {
     this.router.navigate(['/user-interface-main']);
   }
+  toRegister(): void {
+    this.router.navigate(['/register']);
+  }
 
 }
