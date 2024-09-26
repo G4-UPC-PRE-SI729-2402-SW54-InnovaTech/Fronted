@@ -1,0 +1,60 @@
+.main-content {
+    margin-left: 270px; /* Deja espacio para la barra lateral */
+    padding: 20px;
+    background-color: #f8f8f8;
+    min-height: 100vh;
+}
+
+/* Títulos en el contenido principal */
+h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Contenedor de las campañas */
+.campaigns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Tarjetas individuales de las campañas */
+.campaign-card {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.campaign-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.campaign-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.campaign-card button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.campaign-card button:hover {
+    background-color: #2980b9;
+}
