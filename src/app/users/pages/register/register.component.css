@@ -1,0 +1,23 @@
+.logo img {
+  width: 100%;
+  max-width: 600px;
+}
+
+input {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 15px; /* Aumenta el padding para hacer los botones más grandes */
+  color: white;
+  font-size: 1.25rem; /* Aumenta el tamaño de la fuente */
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 20px; /* Aumenta el padding en pantallas más grandes */
+    font-size: 1.5rem; /* Aumenta el tamaño de la fuente en pantallas más grandes */
+  }
+}
