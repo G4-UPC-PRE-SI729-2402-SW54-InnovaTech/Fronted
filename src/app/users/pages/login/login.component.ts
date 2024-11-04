@@ -24,7 +24,7 @@ export class LoginComponent {
   onSendCode(): void {
     this.apiService.getUserByEmail(this.email).subscribe((user: any) => {
       if (user && user.passwordHash === this.password) {
-        this.router.navigate(['/user-interface-main']);
+        this.router.navigate(['/home']);
       } else {
         alert('Invalid email or password');
       }
