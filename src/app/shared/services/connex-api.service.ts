@@ -38,6 +38,10 @@ export class ConnexApiService {
     getInfluencerById(id: string) {
         return this.http.get(this.baseUrl + '/influencers/' + id);
     }
+    getInfluencerByUserId(userId: string) {
+        return this.http.get(this.baseUrl + '/influencers/user/' + userId);
+    }
+
     updateInfluencer(id: string, influencerData: {
         email: string, password: string,
         firstName: string, lastName: string,
@@ -61,6 +65,9 @@ export class ConnexApiService {
     getCompanyById(id: string) {
         return this.http.get(this.baseUrl + '/companies/' + id);
     }
+    getCompanyByUserId(userId: string) {
+        return this.http.get(this.baseUrl + '/companies/user/' + userId);
+    }
     updateCompany(id: string, companyData: {
         email: string, password: string,
         name: string, industry: string,
@@ -70,5 +77,24 @@ export class ConnexApiService {
     deleteCompany(id: string) {
         return this.http.delete(this.baseUrl + '/companies/' + id);
     }
+    // Profile Managment
+    getProfiles() {
+        return this.http.get(this.baseUrl + '/profiles');
+    }
+    addProfile(profileData: {
+        userId: string,
+        bio: string,
+        brandName: string,
+        profilePictureUrl: string,
+        city: string,
+        country: string,
+    }) {
+        return this.http.post(this.baseUrl + '/profiles', profileData);
+    }
+    getProfileByUserId(userId: string) {
+        return this.http.get(this.baseUrl + '/profiles/' + userId);
+    }
+
+
 
 }

@@ -4,10 +4,20 @@
         <h2>Connex</h2>
     </div>
     <ul>
+        <li>
+            <a>
+                <app-user-profile-button
+                        [userName]="userName"
+                        [userPhotoUrl]="userPhotoUrl"
+                ></app-user-profile-button>
+            </a>
+        </li>
         <li><a href="/home">Home</a></li>
         <li><a href="/profiles">Profiles</a></li>
         <li><a href="/campaigns">Campaigns</a></li>
         <li><a href="/configuration">Configuration</a></li>
-        <li><a href="/login">Exit</a></li>
+        <li><a (click)="onExit()">Exit</a></li>
+
+
     </ul>
 </div>

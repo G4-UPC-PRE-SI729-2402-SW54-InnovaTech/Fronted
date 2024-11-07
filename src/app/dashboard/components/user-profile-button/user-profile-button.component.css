@@ -1,0 +1,25 @@
+.user-profile-button {
+    display: flex;
+    align-items: center;
+    border-radius: 15px; /* Bordes curvos */
+    padding: 10px 20px;
+    background-color: #1e70bf; /* Color similar al sidebar */
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.user-profile-button.clicked {
+    background-color: #145a8d; /* Color al hacer clic */
+}
+
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Imagen circular */
+    margin-right: 10px;
+}
+
+.profile-name {
+    font-size: 16px;
+    font-weight: bold;
+}

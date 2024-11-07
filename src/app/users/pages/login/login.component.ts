@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { MatCardImage } from "@angular/material/card";
 import { Router } from "@angular/router";
-import {ConnexApiService} from "../../../shared/services/connex-api.service";
-import {FormsModule} from "@angular/forms";
-
+import { ConnexApiService } from "../../../shared/services/connex-api.service";
+import { FormsModule } from "@angular/forms";
+import { AuthService } from "../../../shared/services/auth.service";
 
 @Component({
   selector: 'app-login',
@@ -19,12 +19,15 @@ export class LoginComponent {
   email: string = '';
   password: string = '';
 
-  constructor(private router: Router, private apiService: ConnexApiService) {}
+  constructor(
+      private router: Router,
+      private apiService: ConnexApiService,
+      private authService: AuthService) {}
 
   onSendCode(): void {
     this.apiService.getUserByEmail(this.email).subscribe((user: any) => {
       if (user && user.passwordHash === this.password) {
-        this.router.navigate(['/home']);
+        this.authService.login(user.id.toString());
       } else {
         alert('Invalid email or password');
       }
